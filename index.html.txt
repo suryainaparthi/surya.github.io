@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surya Inaparthi | Data Analyst</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1>Surya Inaparthi</h1>
+  <p>Data Analyst | Business Intelligence Specialist</p>
+  <p class="tagline">Turning Data into Business Impact</p>
+  <a href="#projects" class="btn">View Projects</a>
+</header>
+
+<section class="section about">
+  <h2>About Me</h2>
+  <p>
+    I am a Data Analyst with hands-on experience delivering actionable insights
+    using Python, Power BI, SQL, and Machine Learning. I have built dashboards,
+    automated reporting systems, and predictive models for business and education environments.
+  </p>
+</section>
+
+<section class="section" id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Pizza Sales Dashboard</h3>
+    <p>Power BI dashboard analyzing revenue, customer behavior, and profitability using DAX KPIs.</p>
+  </div>
+
+  <div class="card">
+    <h3>Telecom Customer Churn Prediction</h3>
+    <p>Machine learning classification model achieving 85% accuracy with ROC and confusion matrix analysis.</p>
+  </div>
+
+  <div class="card">
+    <h3>Sales Data Analysis & Automation</h3>
+    <p>SQL-based sales insights and automated Excel KPI reporting workflows.</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Skills</h2>
+  <p class="skills">
+    Power BI • Python • SQL • DAX • Excel • Tableau • Scikit-learn • Machine Learning • Git
+  </p>
+</section>
+
+<section class="section">
+  <h2>Experience</h2>
+
+  <div class="card">
+    <h3>Software & Data Intern — Tees Maritime Cluster</h3>
+    <p>Built GDPR-compliant data platforms, dashboards, and automated reports.</p>
+  </div>
+
+  <div class="card">
+    <h3>Data Analytics Intern — Uptrail Ltd</h3>
+    <p>Designed interactive Power BI dashboards and Python analytics.</p>
+  </div>
+</section>
+
+<section class="section contact">
+  <h2>Contact</h2>
+  <p>Email: s3459716@live.tees.ac.uk</p>
+  <p>LinkedIn: linkedin.com/in/suryainaparthi</p>
+</section>
+
+<footer>
+  <p>© 2026 Surya Inaparthi</p>
+</footer>
+
+</body>
+</html>
