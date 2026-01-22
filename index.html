@@ -8,46 +8,50 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVIGATION -->
 <nav class="navbar">
-  <div class="logo">Surya</div>
-  <ul>
+  <div class="logo">Surya Inaparthi</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <ul id="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#contact" class="nav-btn">Contact</a></li>
+    <li><a href="#contact" class="nav-btn">Hire Me</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <header class="hero" id="home">
-  <img src="profile.jpg" class="profile-pic" alt="Surya Inaparthi">
-  <h1>Surya Inaparthi</h1>
-  <p class="role">Data Analyst | Business Intelligence Specialist</p>
-  <p class="tagline">Transforming Data into Business Impact</p>
-
-  <div class="hero-buttons">
-    <a href="#projects" class="btn">View Projects</a>
-    <a href="#contact" class="btn-outline">Hire Me</a>
+  <div class="hero-content">
+    <img src="profile.jpg" class="profile-pic" alt="Surya Inaparthi">
+    <h1>Surya Inaparthi</h1>
+    <h2>Data Analyst | Business Intelligence Specialist | Python & Power BI Expert</h2>
+    <p class="tagline">
+      Transforming complex datasets into strategic business recommendations
+    </p>
+    <span class="location">📍 Middlesbrough, UK</span>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="cv.pdf" class="btn-outline" target="_blank">Download CV</a>
+    </div>
   </div>
 </header>
 
 <!-- STATS -->
-<section class="stats-section">
-  <div class="stats-box">
-    <h3>3+</h3>
-    <p>Dashboards Built</p>
-  </div>
-  <div class="stats-box">
+<section class="stats">
+  <div class="stat-box">
     <h3>85%</h3>
     <p>ML Accuracy</p>
   </div>
-  <div class="stats-box">
+  <div class="stat-box">
     <h3>2</h3>
-    <p>Internships</p>
+    <p>Professional Internships</p>
+  </div>
+  <div class="stat-box">
+    <h3>3+</h3>
+    <p>Interactive Dashboards</p>
   </div>
 </section>
 
@@ -55,10 +59,40 @@
 <section class="section" id="about">
   <h2>Professional Summary</h2>
   <p>
-    I am a Data Analyst and Business Intelligence Specialist with experience in Python, SQL,
-    Power BI, and Machine Learning. I design dashboards, automate reporting pipelines, and
-    build predictive models that help organizations make data-driven decisions.
+    I am a data-driven professional with experience in predictive modeling,
+    business intelligence systems, database architecture, and GDPR-compliant
+    platforms. I specialize in turning raw data into actionable insights that
+    support strategic decision-making.
   </p>
+  <p>
+    I am currently pursuing an M.Sc. in Computer Science at Teesside University,
+    focusing on advanced analytics, machine learning, and data systems.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <h2>Technical Mastery</h2>
+
+  <div class="skill-category">
+    <h3>Data Analysis</h3>
+    <p>Power BI, Tableau, SQL, DAX, Excel</p>
+  </div>
+
+  <div class="skill-category">
+    <h3>Machine Learning</h3>
+    <p>Scikit-learn, Regression, Classification, Clustering</p>
+  </div>
+
+  <div class="skill-category">
+    <h3>Programming</h3>
+    <p>Python (Pandas, NumPy, Matplotlib, Seaborn)</p>
+  </div>
+
+  <div class="skill-category">
+    <h3>Platform Development</h3>
+    <p>WordPress (Elementor, ACF), Database Design, ETL</p>
+  </div>
 </section>
 
 <!-- PROJECTS -->
@@ -66,31 +100,39 @@
   <h2>Featured Projects</h2>
 
   <div class="project-card">
-    <h3>Pizza Sales Dashboard</h3>
-    <p>Power BI dashboard analyzing sales, customer behavior, and profitability using DAX KPIs.</p>
-    <a href="#" class="project-link">View Project</a>
+    <h3>Pizza Restaurant Sales Dashboard</h3>
+    <p>
+      Power BI dashboard highlighting product profitability, DAX KPIs,
+      and customer behavior trends.
+    </p>
+    <a href="https://github.com/suryainaparthi/pizza-restaurant-sales-dashboard.git" target="_blank">
+      View on GitHub
+    </a>
   </div>
 
   <div class="project-card">
-    <h3>Telecom Churn Prediction</h3>
-    <p>Machine learning model achieving 85% accuracy using classification algorithms.</p>
-    <a href="#" class="project-link">View Project</a>
+    <h3>Telecom Customer Churn Prediction</h3>
+    <p>
+      Machine learning model achieving 85% accuracy with hyperparameter tuning
+      and ROC analysis.
+    </p>
+    <a href="https://github.com/suryainaparthi/telecom-customer-churn-prediction.git" target="_blank">
+      View on GitHub
+    </a>
   </div>
 
   <div class="project-card">
-    <h3>Sales Data Automation</h3>
-    <p>SQL-based analysis with automated Excel KPI reporting workflows.</p>
-    <a href="#" class="project-link">View Project</a>
+    <h3>Sales Data Analysis & Automation</h3>
+    <p>
+      SQL data extraction with automated Excel KPI dashboards for reporting.
+    </p>
   </div>
-</section>
 
-<!-- SKILLS -->
-<section class="section" id="skills">
-  <h2>Technical Skills</h2>
-  <div class="skills-grid">
-    <span>Power BI</span><span>Python</span><span>SQL</span><span>DAX</span>
-    <span>Excel</span><span>Tableau</span><span>Scikit-learn</span>
-    <span>Machine Learning</span><span>Git</span>
+  <div class="project-card">
+    <h3>Full-Stack MVP Platform</h3>
+    <p>
+      WordPress + Airtable system for real-time data entry and analytics.
+    </p>
   </div>
 </section>
 
@@ -100,53 +142,37 @@
 
   <div class="exp-card">
     <h3>Software & Data Intern — Tees Maritime Cluster</h3>
-    <p>Built GDPR-compliant dashboards, data pipelines, and automated reporting systems.</p>
+    <p>
+      Built database-driven dashboards and automated compliance reporting tools.
+    </p>
   </div>
 
   <div class="exp-card">
     <h3>Data Analytics Intern — Uptrail Ltd</h3>
-    <p>Designed interactive Power BI dashboards and Python analytics solutions.</p>
+    <p>
+      Designed Power BI dashboards and received a Certificate of Excellence.
+    </p>
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
-<section class="section" id="certifications">
-  <h2>Certifications</h2>
-  <ul class="cert-list">
-    <li>Google Data Analytics Professional Certificate</li>
-    <li>IBM Machine Learning Professional Certificate</li>
-    <li>Introduction to Data Science</li>
-  </ul>
-</section>
-
 <!-- CONTACT -->
-<section class="section contact" id="contact">
-  <h2>Contact</h2>
+<section class="section" id="contact">
+  <h2>Contact & Socials</h2>
   <p>Email: s3459716@live.tees.ac.uk</p>
   <p>LinkedIn: linkedin.com/in/suryainaparthi</p>
+  <p class="privacy">
+    GDPR-compliant. Your data is handled securely and never shared.
+  </p>
 </section>
 
 <footer>
-  <p>© 2026 Surya Inaparthi | Data Analyst Portfolio</p>
+  <p>© 2026 Surya Inaparthi</p>
 </footer>
 
-<!-- SCROLL ANIMATION SCRIPT -->
 <script>
-const elements = document.querySelectorAll(
-  '.section, .project-card, .exp-card, .stats-box'
-);
-
-const reveal = () => {
-  elements.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      el.classList.add('show');
-    }
-  });
-};
-
-window.addEventListener('scroll', reveal);
-reveal();
+function toggleMenu() {
+  document.getElementById("nav-links").classList.toggle("show-menu");
+}
 </script>
 
 </body>
