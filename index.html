@@ -3,69 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Surya Inaparthi | Data Analyst</title>
+<title>Surya Inaparthi | Data Analyst Portfolio</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo">Surya</div>
   <ul>
+    <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#certifications">Certifications</a></li>
     <li><a href="#contact" class="nav-btn">Contact</a></li>
   </ul>
 </nav>
 
-<header class="hero">
-  <img src="profile.jpg" class="profile-pic">
+<!-- HERO -->
+<header class="hero" id="home">
+  <img src="profile.jpg" class="profile-pic" alt="Surya Inaparthi">
   <h1>Surya Inaparthi</h1>
   <p class="role">Data Analyst | Business Intelligence Specialist</p>
-  <p class="tagline">Transforming data into strategic business insight</p>
+  <p class="tagline">Transforming Data into Business Impact</p>
+
   <div class="hero-buttons">
     <a href="#projects" class="btn">View Projects</a>
     <a href="#contact" class="btn-outline">Hire Me</a>
   </div>
 </header>
 
+<!-- STATS -->
+<section class="stats-section">
+  <div class="stats-box">
+    <h3>3+</h3>
+    <p>Dashboards Built</p>
+  </div>
+  <div class="stats-box">
+    <h3>85%</h3>
+    <p>ML Accuracy</p>
+  </div>
+  <div class="stats-box">
+    <h3>2</h3>
+    <p>Internships</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
 <section class="section" id="about">
   <h2>Professional Summary</h2>
   <p>
-    I am a results-driven Data Analyst with strong expertise in Python, Power BI,
-    SQL, and Machine Learning. I design data pipelines, dashboards, and predictive
-    models that help organizations make informed decisions.
+    I am a Data Analyst and Business Intelligence Specialist with experience in Python, SQL,
+    Power BI, and Machine Learning. I design dashboards, automate reporting pipelines, and
+    build predictive models that help organizations make data-driven decisions.
   </p>
 </section>
 
-<section class="highlight">
-  <div class="stats">
-    <div><h3>3+</h3><p>Dashboards</p></div>
-    <div><h3>85%</h3><p>Model Accuracy</p></div>
-    <div><h3>2</h3><p>Internships</p></div>
-  </div>
-</section>
-
+<!-- PROJECTS -->
 <section class="section" id="projects">
   <h2>Featured Projects</h2>
 
-  <div class="card">
-    <h3>Pizza Sales Analytics Dashboard</h3>
-    <p>Power BI dashboard analyzing revenue, customers, and profitability using DAX.</p>
+  <div class="project-card">
+    <h3>Pizza Sales Dashboard</h3>
+    <p>Power BI dashboard analyzing sales, customer behavior, and profitability using DAX KPIs.</p>
+    <a href="#" class="project-link">View Project</a>
   </div>
 
-  <div class="card">
-    <h3>Telecom Customer Churn Prediction</h3>
-    <p>Machine learning classification model achieving 85% accuracy.</p>
+  <div class="project-card">
+    <h3>Telecom Churn Prediction</h3>
+    <p>Machine learning model achieving 85% accuracy using classification algorithms.</p>
+    <a href="#" class="project-link">View Project</a>
   </div>
 
-  <div class="card">
+  <div class="project-card">
     <h3>Sales Data Automation</h3>
-    <p>SQL + Excel automated KPI reporting system.</p>
+    <p>SQL-based analysis with automated Excel KPI reporting workflows.</p>
+    <a href="#" class="project-link">View Project</a>
   </div>
 </section>
 
+<!-- SKILLS -->
 <section class="section" id="skills">
   <h2>Technical Skills</h2>
   <div class="skills-grid">
@@ -75,20 +94,32 @@
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section class="section" id="experience">
   <h2>Professional Experience</h2>
 
-  <div class="card">
+  <div class="exp-card">
     <h3>Software & Data Intern — Tees Maritime Cluster</h3>
-    <p>Built GDPR-compliant dashboards and automated reports.</p>
+    <p>Built GDPR-compliant dashboards, data pipelines, and automated reporting systems.</p>
   </div>
 
-  <div class="card">
+  <div class="exp-card">
     <h3>Data Analytics Intern — Uptrail Ltd</h3>
-    <p>Designed interactive Power BI dashboards.</p>
+    <p>Designed interactive Power BI dashboards and Python analytics solutions.</p>
   </div>
 </section>
 
+<!-- CERTIFICATIONS -->
+<section class="section" id="certifications">
+  <h2>Certifications</h2>
+  <ul class="cert-list">
+    <li>Google Data Analytics Professional Certificate</li>
+    <li>IBM Machine Learning Professional Certificate</li>
+    <li>Introduction to Data Science</li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
 <section class="section contact" id="contact">
   <h2>Contact</h2>
   <p>Email: s3459716@live.tees.ac.uk</p>
@@ -96,17 +127,24 @@
 </section>
 
 <footer>
-  <p>© 2026 Surya Inaparthi</p>
+  <p>© 2026 Surya Inaparthi | Data Analyst Portfolio</p>
 </footer>
 
+<!-- SCROLL ANIMATION SCRIPT -->
 <script>
-const elements = document.querySelectorAll('.section, .card');
+const elements = document.querySelectorAll(
+  '.section, .project-card, .exp-card, .stats-box'
+);
+
 const reveal = () => {
   elements.forEach(el => {
     const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) el.classList.add('show');
+    if (top < window.innerHeight - 100) {
+      el.classList.add('show');
+    }
   });
 };
+
 window.addEventListener('scroll', reveal);
 reveal();
 </script>
