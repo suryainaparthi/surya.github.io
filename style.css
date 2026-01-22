@@ -3,7 +3,6 @@ body {
   font-family: Arial, sans-serif;
   background: radial-gradient(circle at top, #0f172a, #020617);
   color: #e5e7eb;
-  scroll-behavior: smooth;
 }
 
 .hero {
@@ -12,39 +11,47 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #020617, #0f172a);
   text-align: center;
 }
 
-.hero h1 {
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+h1 {
   font-size: 3.5rem;
   color: #38bdf8;
 }
 
-.hero .tagline {
-  margin: 15px 0;
-  font-size: 1.2rem;
-  color: #94a3b8;
-}
+.role { color: #cbd5f5; }
+.tagline { color: #94a3b8; margin-bottom: 20px; }
 
 .btn {
-  margin-top: 20px;
   padding: 12px 30px;
   background: #38bdf8;
   color: #020617;
-  text-decoration: none;
   border-radius: 25px;
+  text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
-}
-.btn:hover {
-  background: #0ea5e9;
 }
 
 .section {
   padding: 70px 20px;
   max-width: 1000px;
   margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
 }
 
 h2 {
@@ -59,20 +66,26 @@ h2 {
   margin: 20px 0;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(56,189,248,0.4);
-  transition: transform 0.3s;
-}
-.card:hover {
-  transform: scale(1.03);
-}
-
-.skills {
-  text-align: center;
-  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
 }
 
-.contact {
-  text-align: center;
+.skills-grid span {
+  display: inline-block;
+  background: #020617;
+  padding: 8px 15px;
+  border-radius: 20px;
+  margin: 5px;
+  box-shadow: 0 0 10px rgba(56,189,248,0.4);
 }
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact { text-align: center; }
 
 footer {
   text-align: center;
@@ -80,4 +93,3 @@ footer {
   background: #020617;
   color: #64748b;
 }
-
