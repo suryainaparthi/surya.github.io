@@ -1,6 +1,13 @@
-body {
+/* RESET */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
   background: radial-gradient(circle at top, #0f172a, #020617);
   color: #e5e7eb;
   scroll-behavior: smooth;
@@ -11,38 +18,48 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(2,6,23,0.9);
+  background: rgba(2, 6, 23, 0.95);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  z-index: 100;
+  padding: 15px 50px;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #38bdf8;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 .navbar a {
   text-decoration: none;
   color: #e5e7eb;
-  font-weight: bold;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #38bdf8;
 }
 
 .nav-btn {
   background: #38bdf8;
   color: #020617 !important;
-  padding: 8px 15px;
+  padding: 8px 16px;
   border-radius: 20px;
 }
-
-.logo { color: #38bdf8; font-size: 20px; }
 
 /* HERO */
 .hero {
   height: 100vh;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,77 +73,153 @@ body {
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid #38bdf8;
-  margin-bottom: 20px;
   box-shadow: 0 0 25px rgba(56,189,248,0.6);
+  margin-bottom: 20px;
   animation: float 4s ease-in-out infinite;
 }
 
 @keyframes float {
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-12px); }
 }
 
-h1 { font-size: 3.5rem; color: #38bdf8; }
-.role { color: #cbd5f5; }
-.tagline { color: #94a3b8; margin-bottom: 20px; }
+h1 {
+  font-size: 3.5rem;
+  color: #38bdf8;
+}
+
+.role {
+  font-size: 1.1rem;
+  color: #cbd5f5;
+}
+
+.tagline {
+  margin: 10px 0 25px;
+  color: #94a3b8;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
 
 .btn, .btn-outline {
   padding: 12px 30px;
   border-radius: 25px;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.btn { background: #38bdf8; color: #020617; }
-.btn-outline { border: 2px solid #38bdf8; color: #38bdf8; }
+.btn {
+  background: #38bdf8;
+  color: #020617;
+}
 
+.btn:hover {
+  background: #0ea5e9;
+}
+
+.btn-outline {
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+}
+
+.btn-outline:hover {
+  background: #38bdf8;
+  color: #020617;
+}
+
+/* STATS */
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background: rgba(56,189,248,0.05);
+}
+
+.stats-box {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.7s ease;
+}
+
+.stats-box h3 {
+  color: #38bdf8;
+  font-size: 2.5rem;
+}
+
+/* SECTIONS */
 .section {
-  padding: 90px 20px;
   max-width: 1000px;
   margin: auto;
+  padding: 90px 20px;
+  text-align: center;
   opacity: 0;
   transform: translateY(40px);
   transition: 0.8s ease;
 }
 
-.show { opacity: 1; transform: translateY(0); }
-
-h2 { text-align: center; color: #38bdf8; margin-bottom: 30px; }
-
-.card {
-  background: rgba(2,6,23,0.8);
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(56,189,248,0.4);
+.section h2 {
+  color: #38bdf8;
+  margin-bottom: 25px;
 }
 
+/* CARDS */
+.project-card, .exp-card {
+  background: rgba(2,6,23,0.85);
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(56,189,248,0.4);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.7s ease;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SKILLS */
 .skills-grid span {
   display: inline-block;
   background: #020617;
-  padding: 8px 15px;
+  padding: 8px 16px;
+  margin: 6px;
   border-radius: 20px;
-  margin: 5px;
   box-shadow: 0 0 10px rgba(56,189,248,0.4);
 }
 
-.highlight {
-  background: rgba(56,189,248,0.05);
-  padding: 40px;
+/* CERTIFICATIONS */
+.cert-list {
+  list-style: none;
 }
 
-.stats {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
+.cert-list li {
+  margin: 10px 0;
 }
 
-.stats h3 { color: #38bdf8; font-size: 2.5rem; }
+/* CONTACT */
+.contact p {
+  margin: 5px 0;
+}
 
-.contact { text-align: center; }
-
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
   background: #020617;
   color: #64748b;
+}
+
+/* SHOW ANIMATION */
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
