@@ -8,45 +8,66 @@
 </head>
 <body>
 
+<nav class="navbar">
+  <div class="logo">Surya</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact" class="nav-btn">Contact</a></li>
+  </ul>
+</nav>
+
 <header class="hero">
   <img src="profile.jpg" class="profile-pic">
   <h1>Surya Inaparthi</h1>
   <p class="role">Data Analyst | Business Intelligence Specialist</p>
-  <p class="tagline">Turning Data into Business Impact</p>
-  <a href="#projects" class="btn">View Projects</a>
+  <p class="tagline">Transforming data into strategic business insight</p>
+  <div class="hero-buttons">
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="#contact" class="btn-outline">Hire Me</a>
+  </div>
 </header>
 
-<section class="section">
-  <h2>About Me</h2>
+<section class="section" id="about">
+  <h2>Professional Summary</h2>
   <p>
-    I am a passionate Data Analyst and Business Intelligence Specialist with hands-on
-    experience delivering insights using Python, Power BI, SQL, and Machine Learning.
-    I build dashboards, automate reporting systems, and develop predictive models
-    that help organizations make data-driven decisions.
+    I am a results-driven Data Analyst with strong expertise in Python, Power BI,
+    SQL, and Machine Learning. I design data pipelines, dashboards, and predictive
+    models that help organizations make informed decisions.
   </p>
 </section>
 
+<section class="highlight">
+  <div class="stats">
+    <div><h3>3+</h3><p>Dashboards</p></div>
+    <div><h3>85%</h3><p>Model Accuracy</p></div>
+    <div><h3>2</h3><p>Internships</p></div>
+  </div>
+</section>
+
 <section class="section" id="projects">
-  <h2>Projects</h2>
+  <h2>Featured Projects</h2>
 
   <div class="card">
-    <h3>Pizza Sales Dashboard</h3>
-    <p>Power BI dashboard analyzing revenue, customer behavior, and profitability using DAX KPIs.</p>
+    <h3>Pizza Sales Analytics Dashboard</h3>
+    <p>Power BI dashboard analyzing revenue, customers, and profitability using DAX.</p>
   </div>
 
   <div class="card">
     <h3>Telecom Customer Churn Prediction</h3>
-    <p>Machine learning classification model achieving 85% accuracy with ROC and confusion matrix analysis.</p>
+    <p>Machine learning classification model achieving 85% accuracy.</p>
   </div>
 
   <div class="card">
-    <h3>Sales Data Analysis & Automation</h3>
-    <p>SQL-based sales insights and automated Excel KPI reporting workflows.</p>
+    <h3>Sales Data Automation</h3>
+    <p>SQL + Excel automated KPI reporting system.</p>
   </div>
 </section>
 
-<section class="section">
-  <h2>Skills</h2>
+<section class="section" id="skills">
+  <h2>Technical Skills</h2>
   <div class="skills-grid">
     <span>Power BI</span><span>Python</span><span>SQL</span><span>DAX</span>
     <span>Excel</span><span>Tableau</span><span>Scikit-learn</span>
@@ -54,21 +75,21 @@
   </div>
 </section>
 
-<section class="section">
-  <h2>Experience</h2>
+<section class="section" id="experience">
+  <h2>Professional Experience</h2>
 
   <div class="card">
     <h3>Software & Data Intern — Tees Maritime Cluster</h3>
-    <p>Built GDPR-compliant data platforms, dashboards, and automated reports.</p>
+    <p>Built GDPR-compliant dashboards and automated reports.</p>
   </div>
 
   <div class="card">
     <h3>Data Analytics Intern — Uptrail Ltd</h3>
-    <p>Designed interactive Power BI dashboards and Python analytics.</p>
+    <p>Designed interactive Power BI dashboards.</p>
   </div>
 </section>
 
-<section class="section contact">
+<section class="section contact" id="contact">
   <h2>Contact</h2>
   <p>Email: s3459716@live.tees.ac.uk</p>
   <p>LinkedIn: linkedin.com/in/suryainaparthi</p>
@@ -79,13 +100,11 @@
 </footer>
 
 <script>
-const sections = document.querySelectorAll('.section, .card');
+const elements = document.querySelectorAll('.section, .card');
 const reveal = () => {
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      sec.classList.add('show');
-    }
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) el.classList.add('show');
   });
 };
 window.addEventListener('scroll', reveal);
