@@ -1,12 +1,11 @@
-/* =======================
-   GLOBAL RESET
-======================= */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ================= BODY ================= */
 body {
   font-family: "Segoe UI", system-ui, sans-serif;
   background: radial-gradient(circle at top, #0f172a, #020617);
@@ -15,15 +14,18 @@ body {
   scroll-behavior: smooth;
 }
 
-/* =======================
-   NAVBAR
-======================= */
+/* Light theme */
+body.light {
+  background: #f8fafc;
+  color: #020617;
+}
+
+/* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   background: rgba(2,6,23,0.95);
-  backdrop-filter: blur(8px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,8 +35,15 @@ body {
 
 .logo {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: bold;
   color: #38bdf8;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: #38bdf8;
+  cursor: pointer;
 }
 
 .navbar ul {
@@ -47,11 +56,6 @@ body {
   text-decoration: none;
   color: #e5e7eb;
   font-weight: 500;
-  transition: 0.3s;
-}
-
-.navbar a:hover {
-  color: #38bdf8;
 }
 
 .nav-btn {
@@ -61,19 +65,18 @@ body {
   border-radius: 20px;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 26px;
+.theme-toggle {
+  background: none;
+  border: none;
   color: #38bdf8;
+  font-size: 18px;
   cursor: pointer;
 }
 
-/* =======================
-   HERO
-======================= */
+/* ================= HERO ================= */
 .hero {
   min-height: 100vh;
-  padding-top: 100px;
+  padding-top: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,7 +135,6 @@ body {
   border-radius: 25px;
   font-weight: bold;
   text-decoration: none;
-  transition: 0.3s;
 }
 
 .btn {
@@ -140,21 +142,12 @@ body {
   color: #020617;
 }
 
-.btn:hover { background: #0ea5e9; }
-
 .btn-outline {
   border: 2px solid #38bdf8;
   color: #38bdf8;
 }
 
-.btn-outline:hover {
-  background: #38bdf8;
-  color: #020617;
-}
-
-/* =======================
-   STATS
-======================= */
+/* ================= STATS ================= */
 .stats {
   display: flex;
   justify-content: space-around;
@@ -166,14 +159,7 @@ body {
   text-align: center;
 }
 
-.stat-box h3 {
-  color: #38bdf8;
-  font-size: 2.5rem;
-}
-
-/* =======================
-   SECTIONS
-======================= */
+/* ================= SECTIONS ================= */
 .section {
   max-width: 1000px;
   margin: auto;
@@ -186,45 +172,37 @@ body {
   margin-bottom: 25px;
 }
 
-/* =======================
-   SKILLS
-======================= */
-.skill-category {
-  margin: 20px 0;
-  padding: 20px;
-  background: rgba(2,6,23,0.85);
+/* ================= SKILL BARS ================= */
+.skill-bar { margin: 20px 0; }
+
+.bar {
+  width: 100%;
+  height: 10px;
+  background: #020617;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(56,189,248,0.25);
 }
 
-/* =======================
-   PROJECTS & EXPERIENCE
-======================= */
+.fill {
+  height: 100%;
+  width: var(--level);
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+}
+
+/* ================= CARDS ================= */
 .project-card, .exp-card {
   background: rgba(2,6,23,0.85);
   padding: 25px;
   margin: 20px 0;
   border-radius: 12px;
-  box-shadow: 0 0 18px rgba(56,189,248,0.35);
+  transition: 0.3s;
 }
 
-.project-card a {
-  color: #38bdf8;
-  font-weight: bold;
-  text-decoration: none;
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(56,189,248,0.6);
 }
 
-/* =======================
-   CONTACT
-======================= */
-.privacy {
-  font-size: 0.85rem;
-  color: #94a3b8;
-}
-
-/* =======================
-   FOOTER
-======================= */
+/* ================= FOOTER ================= */
 footer {
   text-align: center;
   padding: 20px;
@@ -232,9 +210,7 @@ footer {
   color: #64748b;
 }
 
-/* =======================
-   MOBILE
-======================= */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
   .menu-toggle { display: block; }
@@ -245,7 +221,6 @@ footer {
     width: 100%;
     background: #020617;
     margin-top: 10px;
-    padding: 10px 0;
   }
 
   .navbar ul.show-menu { display: flex; }
@@ -254,8 +229,6 @@ footer {
     text-align: center;
     padding: 10px 0;
   }
-
-  .hero-buttons { flex-direction: column; }
 
   .stats { flex-direction: column; gap: 20px; }
 
