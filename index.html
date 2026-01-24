@@ -11,14 +11,12 @@
 <!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo">Surya Inaparthi</div>
-
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
   <ul id="nav-links">
     <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="#about">Summary</a></li>
+    <li><a href="#skills">Toolkit</a></li>
+    <li><a href="#projects">Case Studies</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact" class="nav-btn">Hire Me</a></li>
     <li><button class="theme-toggle" onclick="toggleTheme()">🌙</button></li>
@@ -34,73 +32,60 @@
     <p class="tagline">Transforming complex datasets into strategic business recommendations</p>
     <span class="location">📍 Middlesbrough, UK</span>
 
+    <div class="tech-stack">
+      <span>Python</span><span>Power BI</span><span>SQL</span><span>Machine Learning</span>
+    </div>
+
     <div class="hero-buttons">
-      <a href="#projects" class="btn">View Projects</a>
+      <a href="#projects" class="btn">View Case Studies</a>
       <a href="cv.pdf" class="btn-outline" target="_blank">Download CV</a>
     </div>
   </div>
 </header>
 
-<!-- STATS -->
+<!-- KPI STATS -->
 <section class="stats">
   <div class="stat-box"><h3>85%</h3><p>ML Accuracy</p></div>
-  <div class="stat-box"><h3>2</h3><p>Professional Internships</p></div>
-  <div class="stat-box"><h3>3+</h3><p>Interactive Dashboards</p></div>
+  <div class="stat-box"><h3>2</h3><p>Industry Internships</p></div>
+  <div class="stat-box"><h3>3+</h3><p>BI Dashboards</p></div>
 </section>
 
-<!-- ABOUT -->
+<!-- SUMMARY -->
 <section class="section" id="about">
   <h2>Professional Summary</h2>
   <p>
-    Data Analyst with expertise in predictive modelling, business intelligence,
-    database architecture, and GDPR-compliant data platforms.
-    Currently pursuing an M.Sc. in Computer Science at Teesside University.
+    Data Analyst specializing in predictive modelling, dashboard engineering,
+    and GDPR-compliant data systems. Experienced in transforming complex datasets
+    into business insights. Currently pursuing an M.Sc. in Computer Science at
+    Teesside University.
   </p>
 </section>
 
-<!-- SKILLS (ANIMATED BARS) -->
+<!-- TOOLKIT -->
 <section class="section" id="skills">
-  <h2>Technical Mastery</h2>
+  <h2>Analytics Toolkit</h2>
 
-  <div class="skill-bar">
-    <span>Power BI</span>
-    <div class="bar"><div class="fill" style="--level:90%"></div></div>
-  </div>
+  <div class="skill-bar"><span>Power BI</span><div class="bar"><div class="fill" style="--level:90%"></div></div></div>
+  <div class="skill-bar"><span>Python</span><div class="bar"><div class="fill" style="--level:85%"></div></div></div>
+  <div class="skill-bar"><span>SQL</span><div class="bar"><div class="fill" style="--level:80%"></div></div></div>
+  <div class="skill-bar"><span>Machine Learning</span><div class="bar"><div class="fill" style="--level:75%"></div></div></div>
 
-  <div class="skill-bar">
-    <span>Python</span>
-    <div class="bar"><div class="fill" style="--level:85%"></div></div>
-  </div>
-
-  <div class="skill-bar">
-    <span>SQL</span>
-    <div class="bar"><div class="fill" style="--level:80%"></div></div>
-  </div>
-
-  <div class="skill-bar">
-    <span>Machine Learning</span>
-    <div class="bar"><div class="fill" style="--level:75%"></div></div>
-  </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- CASE STUDIES -->
 <section class="section" id="projects">
-  <h2>Featured Projects</h2>
+  <h2>Data Case Studies</h2>
 
   <div class="project-card">
     <h3>Pizza Restaurant Sales Dashboard</h3>
     <p>Power BI dashboard with DAX KPIs and product profitability insights.</p>
-    <a href="https://github.com/suryainaparthi/pizza-restaurant-sales-dashboard.git" target="_blank">
-      View on GitHub
-    </a>
+    <a href="https://github.com/suryainaparthi/pizza-restaurant-sales-dashboard.git" target="_blank">View on GitHub</a>
   </div>
 
   <div class="project-card">
     <h3>Telecom Customer Churn Prediction</h3>
     <p>ML classification model achieving 85% accuracy with ROC analysis.</p>
-    <a href="https://github.com/suryainaparthi/telecom-customer-churn-prediction.git" target="_blank">
-      View on GitHub
-    </a>
+    <a href="https://github.com/suryainaparthi/telecom-customer-churn-prediction.git" target="_blank">View on GitHub</a>
   </div>
 
   <div class="project-card">
@@ -116,7 +101,7 @@
 
 <!-- EXPERIENCE -->
 <section class="section" id="experience">
-  <h2>Professional Experience</h2>
+  <h2>Industry Experience</h2>
 
   <div class="exp-card">
     <h3>Software & Data Intern — Tees Maritime Cluster</h3>
@@ -141,15 +126,10 @@
   <p>© 2026 Surya Inaparthi</p>
 </footer>
 
-<!-- MOBILE MENU -->
 <script>
 function toggleMenu() {
   document.getElementById("nav-links").classList.toggle("show-menu");
 }
-</script>
-
-<!-- THEME TOGGLE -->
-<script>
 function toggleTheme() {
   document.body.classList.toggle("light");
 }
